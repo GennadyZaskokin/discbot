@@ -42,7 +42,7 @@ client.on("message", async message => {
   
   
   if(command === "clear") {
-
+    if(message.member.hasPermission("MANAGE_MESSAGES")) 
     message.channel.bulkDelete (100)
    
   }
