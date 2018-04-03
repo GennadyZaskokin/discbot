@@ -42,8 +42,9 @@ client.on("message", async message => {
   
   
   if(command === "clear") {
-    if(message.member.hasPermission("MANAGE_MESSAGES")) 
-    message.channel.bulkDelete (100)
+    if(message.member.hasPermission("MANAGE_MESSAGES")) {
+    const deleteCount = parseInt(args[0], 10);
+    message.channel.bulkDelete (deleteCount)
    
   }
 });
