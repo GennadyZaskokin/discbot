@@ -42,12 +42,9 @@ client.on("message", async message => {
   
   
   if(command === "clear") {
-    // This command removes all messages from all users in the channel, up to 100.
-    
-    // get the delete count, as an actual number.
     const deleteCount = parseInt(args[0], 10);
 
-    message.channel.bulkDelete(deleteCount);
+    message.channel.bulkDelete(deleteCount + 1);
   }
 });
 
