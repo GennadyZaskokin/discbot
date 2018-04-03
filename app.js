@@ -46,7 +46,7 @@ client.on("message", async message => {
     const deleteCount = parseInt(args[0]);
     // So we get our messages, and delete them. Simple enough, right?
     const fetched = await message.channel.fetchMessages({count: deleteCount});
-    message.channel.bulkDelete(fetched)
+    message.channel.Delete(fetched)
   }
 });
 
